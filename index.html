@@ -1,0 +1,630 @@
+<!-- /index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rooted Renovations — Home Renovation, Without the Headache.</title>
+  <meta name="description" content="Rooted Renovations: faith-inspired concierge home renovation planning. Clear plans, vetted contractors, stress-free timelines." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Rooted Renovations" />
+  <meta property="og:description" content="Rooted in Purpose. Built with Integrity." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#2F5D3A" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://www.example.com/"><!-- why: avoid duplicate content; replace with real domain -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --forest:#2F5D3A; --forest-700:#264c30; --forest-900:#1c3824;
+      --charcoal:#2f2f2f; --brown:#8B5E3C; --sand:#EDE7DD; --cloud:#faf9f7; --white:#ffffff; --accent:#a3724b;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"; color:var(--charcoal); background:var(--cloud); }
+    .font-serif { font-family:"Lora",Georgia,Cambria,"Times New Roman",Times,serif; }
+    .reveal { opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity:1; transform:translateY(0); }
+    .texture:before{
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:.05;
+      background-image: radial-gradient(#000 1px, transparent 1.5px);
+      background-size:10px 10px;
+    }
+    .focus-ring:focus-visible { outline:3px solid var(--brown); outline-offset:2px; }
+    .file-pill { background:var(--sand); border:1px solid #e4dccf; }
+    /* File input button brand color */
+    input[type="file"]::file-selector-button{
+      background:var(--forest); color:#fff; border:0; border-radius:.5rem; padding:.5rem .75rem; cursor:pointer;
+    }
+    input[type="file"]::file-selector-button:hover{ filter:brightness(0.95); }
+    /* Reduced motion: disable bounce/reveal transitions */
+    @media (prefers-reduced-motion: reduce){
+      * { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity:1 !important; transform:none !important; }
+    }
+    /* Skip link */
+    .skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip-link:focus{ left:1rem; top:1rem; width:auto; height:auto; z-index:50; background:#fff; border-radius:.5rem; padding:.5rem .75rem; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Rooted Renovations",
+    "url":"https://www.example.com/",
+    "logo":"https://www.example.com/icon.svg",
+    "slogan":"Rooted in Purpose. Built with Integrity."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Rooted Renovations",
+    "url":"https://www.example.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.example.com/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body class="antialiased">
+  <a href="#home" class="skip-link">Skip to content</a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3 focus-ring" aria-label="Rooted Renovations Home">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg" style="background:var(--forest);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3l9 8h-3v8h-5v-5H11v5H6v-8H3l9-8z" fill="white"/>
+            </svg>
+          </span>
+          <div class="leading-tight">
+            <span class="block font-bold tracking-wide" style="color:var(--forest)">Rooted Renovations</span>
+            <span class="block text-xs text-neutral-500">Rooted in Purpose. Built with Integrity.</span>
+          </div>
+        </a>
+        <!-- Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm" aria-label="Primary">
+          <a class="hover:underline decoration-2 underline-offset-4 focus-ring" href="#home">Home</a>
+          <a class="hover:underline decoration-2 underline-offset-4 focus-ring" href="#how">How It Works</a>
+          <a class="hover:underline decoration-2 underline-offset-4 focus-ring" href="#projects">Projects</a>
+          <a class="hover:underline decoration-2 underline-offset-4 focus-ring" href="#contact">Contact</a>
+          <a class="hover:underline decoration-2 underline-offset-4 focus-ring" href="#terms">Terms</a>
+          <a href="#lead" class="ml-2 inline-flex items-center rounded-lg px-4 py-2 text-white shadow-sm focus-ring transition" style="background:var(--forest)">
+            <span>Start My Project Plan</span>
+          </a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg focus-ring"
+          aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+          <svg id="iconMenu" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+          <svg id="iconClose" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M18 6l-12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-black/5" role="navigation" aria-label="Mobile">
+      <div class="px-4 py-3 space-y-2">
+        <a class="block py-2 focus-ring" href="#home">Home</a>
+        <a class="block py-2 focus-ring" href="#how">How It Works</a>
+        <a class="block py-2 focus-ring" href="#projects">Projects</a>
+        <a class="block py-2 focus-ring" href="#contact">Contact</a>
+        <a class="block py-2 focus-ring" href="#terms">Terms</a>
+        <a href="#lead" class="block text-center rounded-lg px-4 py-2 text-white focus-ring" style="background:var(--forest)">Start My Project Plan</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" role="main">
+    <!-- Hero -->
+    <section class="relative overflow-hidden" aria-labelledby="hero-title">
+      <div class="relative texture">
+        <div class="absolute inset-0" style="background:linear-gradient(135deg, var(--forest) 0%, var(--forest-700) 60%, var(--forest-900) 100%);"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div class="grid md:grid-cols-2 items-center gap-12">
+            <div class="text-white reveal">
+              <h1 id="hero-title" class="font-serif text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight">Home Renovation, Without the Headache.</h1>
+              <p class="mt-6 text-lg sm:text-xl opacity-90">Strong Foundations. Faithful Results.</p>
+              <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="#lead" class="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold shadow-lg transition focus-ring" style="background:var(--brown); color:var(--white)">
+                  <span>Start My Project Plan</span>
+                </a>
+                <a href="#how" class="inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold border border-white/30 text-white/90 hover:text-white focus-ring">How it works</a>
+              </div>
+              <p class="mt-6 text-sm text-white/80">“Rooted in Purpose. Built with Integrity.”</p>
+            </div>
+            <div class="relative reveal">
+              <div class="bg-white/95 rounded-2xl p-6 md:p-8 shadow-xl ring-1 ring-black/5">
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg" style="background:var(--sand);">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M12 2l9 8h-3v10H6V10H3l9-8z" stroke="currentColor" stroke-width="1.5"/>
+                      <path d="M9 14h6v6H9z" fill="currentColor" opacity=".1"/>
+                    </svg>
+                  </span>
+                  <h3 class="font-semibold">Concierge Renovation Planning</h3>
+                </div>
+                <p class="mt-4 text-sm text-neutral-600">We handle scope, budget, and timeline—then match you with a vetted contractor you can trust.</p>
+                <ul class="mt-4 space-y-2 text-sm">
+                  <li class="flex items-start gap-3"><svg class="mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Transparent pricing guidance</li>
+                  <li class="flex items-start gap-3"><svg class="mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> 3D concept renders</li>
+                  <li class="flex items-start gap-3"><svg class="mt-0.5" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Faith-led integrity</li>
+                </ul>
+                <a href="#lead" class="mt-6 inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 font-semibold text-white focus-ring transition" style="background:var(--forest)">Start My Project Plan</a>
+              </div>
+              <svg class="absolute -top-8 -right-8 opacity-20" width="140" height="140" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+                <path d="M20 80 C 40 20, 60 20, 80 80" stroke="white" stroke-width="2" fill="none"/>
+                <path d="M30 75 C 45 35, 55 35, 70 75" stroke="white" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#how" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/80 hover:text-white focus-ring rounded-full p-2" aria-label="Scroll to How It Works">
+        <svg class="animate-bounce" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="py-20 md:py-24" aria-labelledby="how-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="max-w-2xl reveal">
+          <h2 id="how-title" class="font-serif text-3xl md:text-4xl font-semibold" style="color:var(--forest)">How It Works</h2>
+          <p class="mt-3 text-neutral-600">A clear, three-step path from idea to contractor.</p>
+        </header>
+        <div class="mt-12 grid md:grid-cols-3 gap-6 lg:gap-8">
+          <article class="reveal bg-white rounded-2xl p-6 shadow-sm ring-1 ring-black/5">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl mb-4" style="background:var(--sand);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="font-semibold">Tell Us About Your Project</h3>
+            <p class="mt-2 text-sm text-neutral-600">Share goals, photos, and constraints. We listen for what matters.</p>
+          </article>
+          <article class="reveal bg-white rounded-2xl p-6 shadow-sm ring-1 ring-black/5">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl mb-4" style="background:var(--sand);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v12H4z" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="font-semibold">Receive a Custom Plan &amp; 3D Render</h3>
+            <p class="mt-2 text-sm text-neutral-600">Scope, budget, timeline, and a concept you can visualize.</p>
+          </article>
+          <article class="reveal bg-white rounded-2xl p-6 shadow-sm ring-1 ring-black/5">
+            <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl mb-4" style="background:var(--sand);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6 10v10h12V10" stroke="currentColor" stroke-width="1.6"/></svg>
+            </div>
+            <h3 class="font-semibold">Get Matched with a Trusted Contractor</h3>
+            <p class="mt-2 text-sm text-neutral-600">We introduce you to a vetted pro aligned with your values.</p>
+          </article>
+        </div>
+
+        <div class="mt-8 reveal">
+          <a href="#projects" class="inline-flex items-center gap-2 text-sm font-semibold focus-ring" style="color:var(--brown)">
+            See Sample Projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (added) -->
+    <section id="projects" class="py-20 md:py-24 bg-white" aria-labelledby="projects-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="reveal">
+          <h2 id="projects-title" class="font-serif text-3xl md:text-4xl font-semibold" style="color:var(--forest)">Sample Projects</h2>
+          <p class="mt-3 text-neutral-600">Concept renders and planning examples.</p>
+        </header>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Card -->
+          <figure class="reveal bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <img src="/images/kitchen.jpg" alt="Warm, modern kitchen concept render" loading="lazy" class="w-full h-52 object-cover">
+            <figcaption class="p-4">
+              <h3 class="font-semibold">Kitchen Refresh</h3>
+              <p class="mt-1 text-sm text-neutral-600">Scope + budget with two finish packages.</p>
+            </figcaption>
+          </figure>
+          <figure class="reveal bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <img src="/images/bathroom.jpg" alt="Spa-like bathroom concept render" loading="lazy" class="w-full h-52 object-cover">
+            <figcaption class="p-4">
+              <h3 class="font-semibold">Bath Oasis</h3>
+              <p class="mt-1 text-sm text-neutral-600">Phasing plan for minimal downtime.</p>
+            </figcaption>
+          </figure>
+          <figure class="reveal bg-white rounded-2xl shadow-sm ring-1 ring-black/5 overflow-hidden">
+            <img src="/images/exterior.jpg" alt="Updated exterior with earth-tone siding" loading="lazy" class="w-full h-52 object-cover">
+            <figcaption class="p-4">
+              <h3 class="font-semibold">Exterior Uplift</h3>
+              <p class="mt-1 text-sm text-neutral-600">Curb appeal within tight budget.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 md:py-24 bg-white" aria-labelledby="about-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal rounded-3xl p-8 md:p-12 shadow-sm ring-1 ring-black/5 relative overflow-hidden">
+          <div class="absolute -top-10 -left-10 w-40 h-40 rounded-full" style="background:var(--sand);" aria-hidden="true"></div>
+          <div class="relative">
+            <h2 id="about-title" class="font-serif text-3xl md:text-4xl font-semibold mb-4" style="color:var(--forest)">About Rooted Renovations</h2>
+            <p class="text-neutral-700 leading-relaxed text-lg">
+              At Rooted Renovations, we believe in building more than homes—we build trust, peace of mind, and lasting value.
+              Guided by integrity, clarity, and purpose, we help homeowners bring their vision to life through expert planning,
+              realistic budgeting, and honest contractor connections.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Is This For You? -->
+    <section class="py-20 md:py-24" aria-labelledby="isy-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="reveal">
+          <h2 id="isy-title" class="font-serif text-3xl md:text-4xl font-semibold" style="color:var(--forest)">Is This for You?</h2>
+        </header>
+        <div class="mt-10 grid md:grid-cols-2 gap-6 lg:gap-8">
+          <div class="reveal bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-black/5">
+            <h3 class="font-semibold text-lg flex items-center gap-2" style="color:var(--forest)">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              YES IF
+            </h3>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You want clear plans and scope before demo day.</li>
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You prefer vetted contractors with accountability.</li>
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You dislike sales pressure and value honest guidance.</li>
+            </ul>
+          </div>
+          <div class="reveal bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-black/5">
+            <h3 class="font-semibold text-lg flex items-center gap-2 text-neutral-800">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              NO IF
+            </h3>
+            <ul class="mt-4 space-y-3 text-sm">
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You’re just browsing and not ready to commit.</li>
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You don’t need guidance on budget or timeline.</li>
+              <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">•</span> You thrive in chaos and want to manage it all.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Intake Form -->
+    <section id="lead" class="py-20 md:py-24 bg-white" aria-labelledby="lead-title">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="max-w-2xl reveal">
+          <h2 id="lead-title" class="font-serif text-3xl md:text-4xl font-semibold" style="color:var(--forest)">Let’s Start Building</h2>
+          <p class="mt-3 text-neutral-600">Share a few details and we’ll prepare your project plan.</p>
+        </header>
+
+        <form id="leadForm" class="mt-10 reveal grid grid-cols-1 md:grid-cols-2 gap-6" novalidate>
+          <!-- Honeypot (spam guard) -->
+          <div class="hidden" aria-hidden="true">
+            <label>Company <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <!-- Name -->
+          <div class="col-span-1">
+            <label for="name" class="block text-sm font-semibold mb-1">Name<span class="text-red-600" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" required class="w-full rounded-lg border px-3 py-2 focus-ring" placeholder="Jane Doe" aria-describedby="error-name" />
+            <p id="error-name" class="mt-1 text-xs text-red-600 hidden" data-error="name" role="alert"></p>
+          </div>
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-1">Email<span class="text-red-600" aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" required class="w-full rounded-lg border px-3 py-2 focus-ring" placeholder="jane@example.com" aria-describedby="error-email" />
+            <p id="error-email" class="mt-1 text-xs text-red-600 hidden" data-error="email" role="alert"></p>
+          </div>
+          <!-- Phone -->
+          <div>
+            <label for="phone" class="block text-sm font-semibold mb-1">Phone</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" pattern="^[0-9\\-\\+\\(\\) ]{7,}$" class="w-full rounded-lg border px-3 py-2 focus-ring" placeholder="(555) 123-4567" aria-describedby="error-phone" />
+            <p id="error-phone" class="mt-1 text-xs text-red-600 hidden" data-error="phone" role="alert"></p>
+          </div>
+          <!-- Type of Project -->
+          <div>
+            <label for="type" class="block text-sm font-semibold mb-1">Type of Project<span class="text-red-600" aria-hidden="true">*</span></label>
+            <select id="type" name="type" required class="w-full rounded-lg border px-3 py-2 focus-ring" aria-describedby="error-type">
+              <option value="">Select...</option>
+              <option>Kitchen Remodel</option>
+              <option>Bathroom Remodel</option>
+              <option>Basement Finish</option>
+              <option>Whole Home</option>
+              <option>Addition</option>
+              <option>Exterior</option>
+              <option>Other</option>
+            </select>
+            <p id="error-type" class="mt-1 text-xs text-red-600 hidden" data-error="type" role="alert"></p>
+          </div>
+          <!-- Budget -->
+          <div>
+            <label for="budget" class="block text-sm font-semibold mb-1">Budget Range<span class="text-red-600" aria-hidden="true">*</span></label>
+            <select id="budget" name="budget" required class="w-full rounded-lg border px-3 py-2 focus-ring" aria-describedby="error-budget">
+              <option value="">Select...</option>
+              <option>$10k – $25k</option>
+              <option>$25k – $50k</option>
+              <option>$50k – $100k</option>
+              <option>$100k – $250k</option>
+              <option>$250k+</option>
+            </select>
+            <p id="error-budget" class="mt-1 text-xs text-red-600 hidden" data-error="budget" role="alert"></p>
+          </div>
+          <!-- Timeline -->
+          <div>
+            <label for="timeline" class="block text-sm font-semibold mb-1">Timeline<span class="text-red-600" aria-hidden="true">*</span></label>
+            <select id="timeline" name="timeline" required class="w-full rounded-lg border px-3 py-2 focus-ring" aria-describedby="error-timeline">
+              <option value="">Select...</option>
+              <option>ASAP</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>6–12 months</option>
+            </select>
+            <p id="error-timeline" class="mt-1 text-xs text-red-600 hidden" data-error="timeline" role="alert"></p>
+          </div>
+          <!-- Upload -->
+          <div class="md:col-span-2">
+            <label for="images" class="block text-sm font-semibold mb-1">Upload Inspiration Images</label>
+            <input id="images" name="images" type="file" accept="image/*" multiple class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-white file:cursor-pointer">
+            <div id="preview" class="mt-3 flex flex-wrap gap-2" aria-live="polite"></div>
+          </div>
+          <!-- Checkbox -->
+          <div class="md:col-span-2">
+            <label class="inline-flex items-start gap-3">
+              <input id="deposit" name="deposit" type="checkbox" class="mt-1">
+              <span class="text-sm">I’m serious and willing to pay a small deposit to begin planning.</span>
+            </label>
+            <p id="error-deposit" class="mt-1 text-xs text-red-600 hidden" data-error="deposit" role="alert"></p>
+          </div>
+          <!-- Submit -->
+          <div class="md:col-span-2">
+            <button id="submitBtn" type="submit" class="w-full md:w-auto inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold text-white shadow-sm focus-ring transition disabled:opacity-50 disabled:cursor-not-allowed" style="background:var(--forest)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>Let’s Start Building</span>
+            </button>
+          </div>
+        </form>
+        <!-- Toast -->
+        <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 hidden">
+          <div class="rounded-xl px-4 py-3 text-white shadow-lg" style="background:var(--brown);">
+            Thanks! We received your details and will reach out shortly.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ratings Placeholder -->
+    <section id="ratings" class="py-16" aria-labelledby="ratings-title">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-black/5">
+          <div class="flex items-start justify-between gap-6 flex-col md:flex-row">
+            <div class="max-w-2xl">
+              <h3 id="ratings-title" class="font-serif text-2xl font-semibold mb-2" style="color:var(--forest)">Contractor &amp; Homeowner Ratings</h3>
+              <p class="text-sm text-neutral-600">
+                Coming soon: a dual-rating accountability system where both contractors and homeowners provide feedback on communication,
+                timeliness, and integrity—keeping every project rooted in trust.
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-white" style="background:var(--forest-700)">In Development</span>
+          </div>
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-lg border border-dashed p-4 text-sm text-neutral-500">Contractor Scorecard (placeholder)</div>
+            <div class="rounded-lg border border-dashed p-4 text-sm text-neutral-500">Homeowner Scorecard (placeholder)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact anchor -->
+    <section id="contact" class="py-12" aria-labelledby="contact-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm ring-1 ring-black/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h3 id="contact-title" class="font-serif text-2xl font-semibold" style="color:var(--forest)">Have questions?</h3>
+            <p class="mt-2 text-sm text-neutral-600">Email us at <a href="mailto:hello@rootedrenovations.com" class="font-semibold" style="color:var(--brown)">hello@rootedrenovations.com</a></p>
+          </div>
+          <a href="#lead" class="inline-flex items-center rounded-xl px-5 py-3 text-white font-semibold focus-ring" style="background:var(--forest)">Start My Project Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms anchor (placeholder) -->
+    <section id="terms" class="py-12" aria-labelledby="terms-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+        <div class="bg-white rounded-2xl p-6 shadow-sm ring-1 ring-black/5">
+          <h3 id="terms-title" class="font-semibold">Terms (Summary)</h3>
+          <p class="mt-2 text-sm text-neutral-600">By submitting, you agree to be contacted. Deposits are applied to planning services. Full terms to be provided upon engagement.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-black/5 bg-white" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+        <nav class="flex items-center gap-6 text-sm" aria-label="Footer">
+          <a href="#home" class="hover:underline underline-offset-4 focus-ring">Home</a>
+          <a href="#how" class="hover:underline underline-offset-4 focus-ring">How It Works</a>
+          <a href="#projects" class="hover:underline underline-offset-4 focus-ring">Projects</a>
+          <a href="#contact" class="hover:underline underline-offset-4 focus-ring">Contact</a>
+          <a href="#terms" class="hover:underline underline-offset-4 focus-ring">Terms</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="#" aria-label="Facebook" class="focus-ring">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7a1 1 0 0 1 1-1h3V2h-3a5 5 0 0 0-5 5v2H6v4h3v9h4z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="focus-ring">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="focus-ring">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7 0h4.8v2.2h.1c.7-1.2 2.5-2.5 5.1-2.5 5.5 0 6.5 3.6 6.5 8.3V24h-5V16.1c0-1.9 0-4.3-2.6-4.3s-3 2-3 4.1V24H7V8z"/></svg>
+          </a>
+        </div>
+        <p class="text-xs text-neutral-500">© <span id="year"></span> Rooted Renovations. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // mobile menu (why: accessibility & focus management)
+    (function(){
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobileMenu');
+      const iconMenu = document.getElementById('iconMenu');
+      const iconClose = document.getElementById('iconClose');
+      if(!btn || !menu) return;
+
+      const firstLink = () => menu.querySelector('a');
+      const openMenu = () => {
+        menu.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+        iconMenu.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        const link = firstLink(); link && link.focus();
+      };
+      const closeMenu = () => {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        iconMenu.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      };
+
+      btn.addEventListener('click', () => (menu.classList.contains('hidden') ? openMenu() : closeMenu()));
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu();
+      });
+      menu.addEventListener('click', (e) => {
+        if(e.target.closest('a')) closeMenu();
+      });
+    })();
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on scroll (why: avoid CPU work for reduced-motion)
+    (function(){
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const items = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      items.forEach(el => io.observe(el));
+    })();
+
+    // scroll spy (why: context of where you are; improves nav UX)
+    (function(){
+      const sections = Array.from(document.querySelectorAll('main section[id]'));
+      const navLinks = Array.from(document.querySelectorAll('nav[aria-label="Primary"] a, #mobileMenu a')).filter(a => a.hash);
+      const map = new Map(navLinks.map(a => [a.hash.replace('#',''), a]));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(({isIntersecting, target}) => {
+          if(!isIntersecting) return;
+          const id = target.id;
+          navLinks.forEach(a => a.removeAttribute('aria-current'));
+          const link = map.get(id); if (link) link.setAttribute('aria-current','page');
+        });
+      }, { threshold: 0.5 });
+      sections.forEach(s => io.observe(s));
+    })();
+
+    // form validation + fake submit
+    (function(){
+      const form = document.getElementById('leadForm');
+      const toast = document.getElementById('toast');
+      const submitBtn = document.getElementById('submitBtn');
+      const fields = ['name','email','type','budget','timeline'];
+      const hpName = 'company'; // honeypot
+
+      function showError(id, msg){
+        const p = form.querySelector(`[data-error="${id}"]`);
+        const el = form.querySelector('#'+id);
+        if (p) { p.textContent = msg; p.classList.remove('hidden'); }
+        if (el) el.setAttribute('aria-invalid','true');
+      }
+      function clearErrors(){
+        form.querySelectorAll('[data-error]').forEach(p => { p.textContent=''; p.classList.add('hidden'); });
+        form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute('aria-invalid'));
+      }
+
+      // file preview
+      const input = document.getElementById('images');
+      const preview = document.getElementById('preview');
+      let blobUrls = [];
+      input.addEventListener('change', () => {
+        // cleanup
+        blobUrls.forEach(u => URL.revokeObjectURL(u)); blobUrls = [];
+        preview.innerHTML = '';
+        const validTypes = ['image/jpeg','image/png','image/webp','image/gif','image/avif'];
+        const files = Array.from(input.files || [])
+          .filter(f => validTypes.includes(f.type))
+          .slice(0, 6);
+        files.forEach(file => {
+          const url = URL.createObjectURL(file); blobUrls.push(url);
+          const wrap = document.createElement('div');
+          wrap.className = 'file-pill rounded-lg px-2 py-2 inline-flex items-center gap-2';
+          wrap.innerHTML = `<img src="${url}" alt="${file.name}" class="h-10 w-10 object-cover rounded-md" loading="lazy"><span class="text-xs">${file.name}</span>`;
+          preview.appendChild(wrap);
+        });
+      });
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        // honeypot
+        const hp = form.querySelector(`[name="${hpName}"]`);
+        if (hp && hp.value) return; // silently drop spam
+
+        let valid = true;
+        fields.forEach(id => {
+          const el = form.querySelector('#'+id);
+          if (!el || !el.value) { valid = false; showError(id, 'This field is required.'); }
+        });
+
+        const email = form.querySelector('#email');
+        if (email.value && !/^\S+@\S+\.\S+$/.test(email.value)) { valid = false; showError('email','Enter a valid email.'); }
+
+        const phone = form.querySelector('#phone');
+        if (phone.value && !/^[0-9\-\+\(\) ]{7,}$/.test(phone.value)) { valid = false; showError('phone','Enter a valid phone number.'); }
+
+        // Optional: require deposit by uncommenting
+        // const deposit = document.getElementById('deposit'); if (!deposit.checked) { valid=false; showError('deposit','Please confirm your commitment.'); }
+
+        if (!valid) return;
+
+        submitBtn.disabled = true;
+
+        // simulate submit (why: easy handoff to backend later)
+        const data = Object.fromEntries(new FormData(form).entries());
+        console.log('Lead submit', data);
+
+        toast.classList.remove('hidden');
+        setTimeout(()=>toast.classList.add('hidden'), 3000);
+
+        form.reset();
+        preview.innerHTML='';
+        blobUrls.forEach(u => URL.revokeObjectURL(u)); blobUrls = [];
+
+        submitBtn.disabled = false;
+      });
+    })();
+  </script>
+</body>
+</html>
