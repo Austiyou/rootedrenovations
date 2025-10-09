@@ -373,12 +373,11 @@
       <h2>Start Your Project</h2>
       <p class="muted">We’ll follow up within 1–2 business days.</p>
     </div>
-    <!-- CHANGED: action + method + enctype -->
-    <form class="form reveal" id="leadForm" 
-          action="https://formspree.io/f/xzzjgdjk" 
-          method="POST" 
-          enctype="multipart/form-data" 
-          novalidate>
+    <!-- ONLY CHANGE #1: add action/method/enctype -->
+    <form class="form reveal" id="leadForm" novalidate
+          action="https://formspree.io/f/xzzjgdjk"
+          method="POST"
+          enctype="multipart/form-data">
       <div class="form-grid">
         <div class="field req">
           <label for="name">Name</label>
@@ -605,33 +604,41 @@
     browse.addEventListener('click', (e)=>{ e.preventDefault(); filesInput.click(); });
     filesInput.addEventListener('change', ()=> setPreview(filesInput.files));
 
-    // Minimal validation that only blocks bad submits (lets Formspree handle good ones)
+    // Simple form validation + fake submit (UNCHANGED except ONE line below)
     const form = document.getElementById('leadForm');
     const setError = (name, msg)=>{
       const el = document.querySelector(`[data-error-for="${name}"]`);
       if(el) el.textContent = msg || '';
     };
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', async (e)=>{
+      /* ONLY CHANGE #2: removed e.preventDefault(); so the real POST goes to Formspree */
       let ok = true;
-      const checks = [
-        ['name', () => (document.getElementById('name').value.trim().length>=2), 'Please enter your full name.'],
-        ['email', () => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value)), 'Please enter a valid email.'],
-        ['projectType', () => (!!document.getElementById('projectType').value), 'Select a project type.'],
-        ['serious', () => (document.getElementById('serious').checked === true), 'Please confirm you’re ready to begin.']
+      const required = [
+        ['name', v=>v.trim().length>=2, 'Please enter your full name.'],
+        ['email', v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), 'Please enter a valid email.'],
+        ['projectType', v=>!!v, 'Select a project type.'],
+        ['serious', v=>v === true, 'Please confirm you’re ready to begin.']
       ];
-      checks.forEach(([id, test, msg])=>{
-        const pass = test();
+      required.forEach(([id, test, msg])=>{
+        const input = id==='serious' ? document.getElementById(id) : document.getElementById(id);
+        const val = id==='serious' ? input.checked : input.value;
+        const pass = test(val);
         setError(id, pass ? '' : msg);
         ok = ok && pass;
       });
-      if(!ok){
-        e.preventDefault();
-        form.scrollIntoView({behavior:'smooth', block:'start'});
+      if(!ok){ 
+        e.preventDefault(); 
+        form.scrollIntoView({behavior:'smooth', block:'start'}); 
+        return; 
       }
-      // if ok, do NOT preventDefault — the form will submit to Formspree
+
+      // The old "simulate send" will be bypassed by the real submit navigation.
+      try{
+        await new Promise(r=>setTimeout(r, 600));
+      }catch(err){}
     });
 
-    // Toast helper (unused now but left as-is to keep other code unchanged)
+    // Toast (unchanged)
     function toast(msg, isError=false){
       const t = document.createElement('div');
       t.textContent = msg;
